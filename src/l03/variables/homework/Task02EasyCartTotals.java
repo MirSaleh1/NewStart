@@ -17,13 +17,16 @@ public class Task02EasyCartTotals {
         double subTotalForSecondProduct=intProduct2*doubleProduct2;
         double subTotalForthirdProduct=intProduct3*doubleProduct3;
 
-        double total=subTotal+subTotalForthirdProduct+subTotalForthirdProduct;
 
         double deliveryFee=5.45;
         double platformFee=0.99;
-        double coupon=(double) total*25/100;
 
+        double total=subTotal+subTotalForthirdProduct+subTotalForthirdProduct
+                +deliveryFee+platformFee;
+
+        double coupon=(double) total*25/100;
         total-=coupon;
+
         System.out.println("our total cost: "+total);
     }
 }
