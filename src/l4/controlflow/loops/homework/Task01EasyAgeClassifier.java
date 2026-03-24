@@ -19,6 +19,5 @@ public class Task01EasyAgeClassifier {
         }else{
             System.out.println("senior");
         }
-
     }
 }
