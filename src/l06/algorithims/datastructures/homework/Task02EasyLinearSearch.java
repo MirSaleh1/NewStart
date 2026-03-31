@@ -1,33 +1,25 @@
 package l06.algorithims.datastructures.homework;
 
+import java.util.Scanner;
+
 public class Task02EasyLinearSearch {
 
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
         int[] grades = {85, 92, 78, 65, 99, 88, 72, 91};
-        System.out.printf("max=%d%n min=%d%n avrage=%f%n",maxPoint(grades)
-        ,minPoint(grades),avrage(grades));
-    }
-    public static int maxPoint(int[] arr){
-        int max=arr[0];
-        for (int i=1;i<arr.length;i++){
-            if (max<arr[i]) max=arr[i];
-        }
-        return max;
-    }
-    public static int minPoint(int[] arr){
-        int min=arr[0];
-        for (int i=1;i<arr.length;i++){
-            if (min>arr[i]) min=arr[i];
-        }
-        return min;
-    }
-    public static double avrage(int[]arr){
-        int sum=0;
-        for (int a:arr){
-            sum+=a;
-        }
-        return (double) sum/arr.length;
+        int target = sc.nextInt();
+        int result = linearSearch(grades, target);
+        if (result != -1) {
+            System.out.println("target=" + target + "\n" +
+                    "index=" + result);
+        } else System.out.println("Not found");
     }
 
+    public static int linearSearch(int[] arr, int target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (target == arr[i]) return i;
+        }
+        return -1;
+    }
 }
