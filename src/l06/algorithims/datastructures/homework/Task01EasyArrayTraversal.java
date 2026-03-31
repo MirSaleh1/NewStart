@@ -8,7 +8,6 @@ public class Task01EasyArrayTraversal {
         System.out.println(sum(arr));
         oddAndEvenNumbers(arr);
     }
-
     public static void printDetails(int[] arr) {
         for (int a : arr) {
             System.out.print(a);
