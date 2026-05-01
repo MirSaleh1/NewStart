@@ -19,7 +19,6 @@ public class Task08Main {
         queue.offer("Dunya");
 
         while (!stack.isEmpty()) {
-            System.out.println(stack.pop());
         }
         while ((!queue.isEmpty())){
             System.out.println(queue.poll());
