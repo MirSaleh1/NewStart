@@ -40,4 +40,5 @@ public class Task5 {
         }
         System.out.println(wordCounter1.equals(wordCounter2));
     }
+
 }
